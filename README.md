@@ -2,7 +2,7 @@
 
 # **Repository** - AI Projects/Learning
 
-#### rename .env.example to .env and add API keys + base URLs
+#### rename [.env.example](https://github.com/al-amin/ai-Artificial-Intelligence/blob/main/.env.example) to .env and add API keys + base URLs
 
 ## Upcoming Ideas/Projects
 - [x] [Ollama on MacOS](https://github.com/al-amin/ai-Artificial-Intelligence/tree/main/01_ollama_macos)
