@@ -52,6 +52,6 @@ Create a new directory using `autogenstudio ui --port 8080 --appdir newdir`.
 
 # UI Model settings:
 
-To use Ollama models, you can list them using `ollama list` (terminal). The first model listed is llama2:13b, with an empty or NULL API and a base URL of http://localhost:11434/v1. You can test the model by clicking "Test Model" in the UI, which should print "Model tested successfully".
+To use Ollama models, you can list them using `ollama list` (terminal). The first model listed is llama2:13b, with an empty or NULL API and a base URL of http://localhost:11434/v1. You can test the model by clicking "Test Model" in the UI, which should print "Model tested successfully". [01_ollama_macos ](https://github.com/al-amin/ai-Artificial-Intelligence/tree/main/01_ollama_macos)
 
 The second model listed is llava:13b, with a NULL API and a base URL of http://127.0.0.1:11434/v1.
