@@ -4,7 +4,7 @@
 
 
 ## Upcoming Ideas/Projects
-- [ ] Ollama
+- [x] Ollama on MacOS
 - [ ] Autogen Studio
 - [ ] MemGpt + Autogen
 - [ ] AutoGen with TeachableAgent (uses Vector DB to remember conversations)
