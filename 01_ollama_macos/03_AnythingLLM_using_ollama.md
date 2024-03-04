@@ -1,8 +1,6 @@
 Anything LLM
 -----------
-GitHub - Mintplex-Labs/anything-llm: A multi-user ChatGPT for any LLMs and vector database. Unlimited documents, messages, and storage in one privacy-focused app. Now available as a desktop application!
-Any LLM, unlimited documents, and fully private. 
-All on your desktop.
+A full-stack application that enables you to turn any document, resource, or piece of content into context that any LLM can use as references during chatting. This application allows you to pick and choose which LLM or Vector Database you want to use as well as supporting multi-user management and permissions.
 
 [official video](https://youtu.be/gd4xkmzLWSQ?list=TLGGWmrBCWXqXtEwNDAzMjAyNA)
 
