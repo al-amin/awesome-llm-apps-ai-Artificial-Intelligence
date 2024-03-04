@@ -9,7 +9,7 @@ Link: <https://useanything.com/>
 
 Download Link: <https://useanything.com/download>
 
-Make sure ollama is running
+Make sure ollama is running <br>
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/17766190-f8be-494d-bd13-53ded4dbdf87)
 
 
