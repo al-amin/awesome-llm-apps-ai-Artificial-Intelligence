@@ -55,7 +55,7 @@ Run `autogenstudio ui --port 8080` to start the UI with port 8080.
 
 # Create a new directory
 
-Create a new directory using `autogenstudio ui --port 8080 --appdir newdir`.
+Create a new directory using `autogenstudio ui --port 8080 --appdir newdir`. <br><br>
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/ba7586e4-2b27-4823-9a3a-d7801c9358b1)
 
 
