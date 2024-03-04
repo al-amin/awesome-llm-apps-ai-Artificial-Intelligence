@@ -5,4 +5,6 @@ All on your desktop.
 
 [official video](https://youtu.be/gd4xkmzLWSQ?list=TLGGWmrBCWXqXtEwNDAzMjAyNA)
 
-Link: <https://useanything.com/download>
+Link: <https://useanything.com/>
+
+Download Link: <https://useanything.com/download>
