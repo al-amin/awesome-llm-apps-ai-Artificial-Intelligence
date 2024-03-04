@@ -43,5 +43,6 @@ f. Check the list of available models
 
 `ollama list`
 
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/8c08380e-9f42-4db7-b23e-9a920267fa58)
 
 For more information and to check the list of available models, refer to the official Ollama documentation <https://github.com/ollama/ollama>.
