@@ -1,8 +1,9 @@
-# ai
+# ai-Artificial-Intelligence
+
 # **Repository** - AI Projects/Learning
 
 
-## Upcoming Ideas/Projects for Videos
+## Upcoming Ideas/Projects
 - [ ] Ollama
 - [ ] Autogen Studio
 - [ ] MemGpt + Autogen
