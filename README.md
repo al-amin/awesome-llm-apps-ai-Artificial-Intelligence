@@ -11,4 +11,4 @@
 - [x] [AnythingLLM](https://github.com/al-amin/ai-Artificial-Intelligence/blob/main/01_ollama_macos/03_AnythingLLM_using_ollama.md)
 - [ ] MemGpt + Autogen
 - [ ] AutoGen with TeachableAgent (uses Vector DB to remember conversations)
-
+- [ ] crewAI
