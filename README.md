@@ -12,4 +12,5 @@
 - [ ] MemGpt + Autogen
 - [ ] AutoGen with TeachableAgent (uses Vector DB to remember conversations)
 - [ ] crewAI
-- [ ] Faster Whisper / Python (ytube)
+- [ ] Faster Whisper / Python (ytube - Local Low Latency Speech to Speech - Mistral 7B + OpenVoice / Whisper | Open Source AI)
+
