@@ -12,3 +12,4 @@
 - [ ] MemGpt + Autogen
 - [ ] AutoGen with TeachableAgent (uses Vector DB to remember conversations)
 - [ ] crewAI
+- [ ] Faster Whisper / Python (ytube)
