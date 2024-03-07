@@ -49,4 +49,53 @@ Replace "your-ngrok-url" with the URL provided by Ngrok when you ran the `ngrok 
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/5ac6ed2e-cad4-4a07-b568-a05986ed66e2)
 
 
+
+Static Endpoint with ngrok
+=====================================
+
+Introduction
+------------
+
+In this guide, we will show you how to create a static endpoint for your application using ngrok. This will allow you to easily access your application from outside your local network.
+
+Creating Endpoints
+-------------------
+
+First, you need to create endpoints for your application. To do this, follow these steps:
+
+1. Go to the ngrok website and sign up for a free account.
+2. Once you have an account, click on the "Create Endpoint" button.
+3. Choose a name for your endpoint, such as "my-app".
+4. Select the "Static" option.
+5. Enter the URL of your application, such as "http://your_free_domain_.ngrok-free.app".
+6. Click "Create Endpoint" to create the endpoint.
+
+Creating Edges
+----------------
+
+Next, you need to create edges for your endpoint. To do this, follow these steps:
+
+1. Go to the ngrok website and sign in to your account.
+2. Click on the "Edges" tab in the top menu bar.
+3. Click on the "Create Edge" button.
+4. Select the endpoint you created earlier, such as "http://your_free_domain_.ngrok-free.app" and check the label for my-app.
+5. Click "Create Edge" to create the edge.
+
+Starting a Tunnel
+-------------------
+
+Now that you have created your endpoint and edge, you can start a tunnel from the command line. To do this, follow these steps:
+
+1. Open your terminal or command prompt.
+2. Copy and paste the following into your terminal:
+```
+ngrok tunnel --label edge=edghts_YOUR_EDGE http://localhost:11434
+```
+3. Press enter to start the tunnel.
+
+Adding the Endpoint to Your Application
+---------------------------------------
+You can now access your application from outside your local network by going to the URL of your endpoint. For example, if you named your endpoint "my-app", you can access it at <https://your-free-domain-.ngrok-free.app>.
+
+
 That's it! With these steps, you should now be able to access Ollama from anywhere, even if it's running locally. Happy coding!
