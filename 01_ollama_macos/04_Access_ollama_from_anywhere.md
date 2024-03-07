@@ -45,6 +45,8 @@ This will forward port 11434 from your local machine to Ngrok, allowing you to a
 To test Ollama, open a web browser and navigate to the following URL: <http://your-ngrok-url.com:11434>
 
 Replace "your-ngrok-url" with the URL provided by Ngrok when you ran the `ngrok http` command. This should open Ollama in your web browser, even if it's running locally.
-![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/bec34d62-f77f-4380-a715-314b7c19dd7e)
+
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/5ac6ed2e-cad4-4a07-b568-a05986ed66e2)
+
 
 That's it! With these steps, you should now be able to access Ollama from anywhere, even if it's running locally. Happy coding!
