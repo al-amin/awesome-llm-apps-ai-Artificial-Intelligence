@@ -35,6 +35,8 @@ This will start Ollama and listen for incoming connections on port 11434. Howeve
 ngrok http 11434 - to forward the port to ngrok
 ```
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/a950d89d-fd35-4728-bb4d-6053620a9701)
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/048b1008-9d33-48a8-a055-2703137a8185)
+
 
 This will forward port 11434 from your local machine to Ngrok, allowing you to access Ollama remotely.
 
