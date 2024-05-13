@@ -32,3 +32,4 @@ Open the browser and visit the following link:
 ```bash
 [docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda](http://localhost:3000/auth/)
 ```
+<img width="1387" alt="Screenshot 2024-05-13 at 19 32 31" src="https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/0e9e0440-594d-458a-ac0c-1be29a5964fb">
