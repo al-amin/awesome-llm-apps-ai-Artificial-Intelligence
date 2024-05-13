@@ -24,5 +24,5 @@ docker run -d -p 3000:8080 -e OLLAMABASEURL=https://example.com -v open-webui:/a
 ### To Run Open WebUI with Nvidia GPU Support
 Use the following command:
 ```bash
-brew install --cask ngrok
+docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
 ```
