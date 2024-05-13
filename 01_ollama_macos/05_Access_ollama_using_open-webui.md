@@ -18,13 +18,7 @@ docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-
 ```
 <img width="1452" alt="Screenshot 2024-05-13 at 19 29 59" src="https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/17ce9e0d-3cbc-42a6-8fc1-36b7dcc5a91e">
 
-
-
-### If Ollama is Installed on a Different Server
-To connect to Ollama on a different server, change the OLLAMA_BASE_URL to the server's URL:
-```bash
-docker run -d -p 3000:8080 -e OLLAMABASEURL=https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
-```
+<img width="1387" alt="Screenshot 2024-05-13 at 19 32 31" src="https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/7a304655-127b-45d2-9973-7b88dfcff69a">
 
 
 ### To access Open WebUI from browser
@@ -32,4 +26,3 @@ Open the browser and visit the following link:
 ```bash
 [docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda](http://localhost:3000/auth/)
 ```
-<img width="1387" alt="Screenshot 2024-05-13 at 19 32 31" src="https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/0e9e0440-594d-458a-ac0c-1be29a5964fb">
