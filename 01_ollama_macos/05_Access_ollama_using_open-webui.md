@@ -24,5 +24,6 @@ docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-
 ### To access Open WebUI from browser
 Open the browser and visit the following link:
 ```bash
-[docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda](http://localhost:3000/auth/)
+http://localhost:3000/auth/
 ```
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/2de4af47-af25-4915-b42f-928c0913183e)
