@@ -4,12 +4,15 @@ Ollama WebUI is a self-hosted, feature-rich, and user-friendly WebUI that can op
 
 ## Installation Guide 🚀
 
-Please note that certain Docker environments may require additional configurations. If you encounter any connectivity issues, our detailed guide in the [Ollama WebUI Documentation](https://github.com/open-webui/open-webui) is ready to assist you.
+First clone the repository using the following command:
+```bash
+git clone https://github.com/open-webui/open-webui.git
+```
 
 ## Quick Start with Docker 🐳
 
 ### Installation with Default Configuration
-If Ollama is installed on your computer, run the following command:
+If Ollama is installed on your computer, run the following command: ref (https://github.com/open-webui/open-webui?tab=readme-ov-file#installation-with-default-configuration)
 ```bash
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
@@ -21,8 +24,8 @@ docker run -d -p 3000:8080 -e OLLAMABASEURL=https://example.com -v open-webui:/a
 ```
 
 
-### To Run Open WebUI with Nvidia GPU Support
-Use the following command:
+### To access Open WebUI from browser
+Open the browser and visit the following link:
 ```bash
-docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
+[docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda](http://localhost:3000/auth/)
 ```
