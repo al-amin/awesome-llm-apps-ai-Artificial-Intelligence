@@ -16,6 +16,9 @@ If Ollama is installed on your computer, run the following command: ref (https:/
 ```bash
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
+<img width="1452" alt="Screenshot 2024-05-13 at 19 29 59" src="https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/17ce9e0d-3cbc-42a6-8fc1-36b7dcc5a91e">
+
+
 
 ### If Ollama is Installed on a Different Server
 To connect to Ollama on a different server, change the OLLAMA_BASE_URL to the server's URL:
