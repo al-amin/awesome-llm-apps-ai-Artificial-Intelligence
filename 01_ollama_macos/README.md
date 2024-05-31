@@ -50,6 +50,6 @@ f. Check the list of available models
 --------------------------------------
 
 Upgrade all installed Ollama models using command line:
-ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} ollama pull {}
+`ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} ollama pull {}`
 
 For more information and to check the list of available models, refer to the official Ollama documentation <https://github.com/ollama/ollama>.
