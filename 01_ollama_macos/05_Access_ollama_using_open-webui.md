@@ -27,3 +27,10 @@ Open the browser and visit the following link:
 http://localhost:3000/auth/
 ```
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/2de4af47-af25-4915-b42f-928c0913183e)
+
+
+
+### Keeping Your Docker Installation Up-to-Date
+In case you want to update your local Docker installation to the latest version, you can do it with [Watchtower](https://containrrr.dev/watchtower/):
+```bash
+docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once open-webui```
