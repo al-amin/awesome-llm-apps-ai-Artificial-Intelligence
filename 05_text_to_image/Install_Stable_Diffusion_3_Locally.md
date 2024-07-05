@@ -41,7 +41,9 @@ The installation process will begin, and you'll be prompted to download the Stab
 <img width="1287" alt="Screenshot 2024-07-05 at 23 34 39" src="https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/b82ade4f-30b8-4f02-aa8a-2d1852f2f6fc">
 <img width="1282" alt="Screenshot 2024-07-05 at 23 35 02" src="https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/8ace5fa3-70b0-4270-aa10-5b0012cab8bc">
 <img width="1371" alt="Screenshot 2024-07-05 at 23 35 44" src="https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/3e6dde19-7015-4d63-bce2-fd92dd9c3fcc">
-![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/f4cd2618-6d4e-493c-8e22-acaf0ea4afcc)
+
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/e1e49926-e39f-4b72-93d9-5b1ce9d32dc6)
+
 
 
 ### Configuration
