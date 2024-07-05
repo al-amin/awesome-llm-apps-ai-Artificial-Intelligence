@@ -32,6 +32,9 @@ Installing on Mac (M1 or M2 Apple Silicon Processor)
 The installation process will begin, and you'll be prompted to download the Stable Diffusion models from the internet. This may take several minutes depending on your internet connection.
 
 ### Example Installing StableSwarmUI
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/933a6266-f30b-454c-acb3-bf878cf54f6a)
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/ec12c23e-b3db-445e-9747-0f753749f6b7)
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/29cac53f-9e7c-41f1-8774-1e90b36adbdd)
 
 
 ### Configuration
