@@ -29,6 +29,9 @@ bash get-whishper.sh
 #### Step 3: Run the download Scripts and files [Manual] from https://whishper.net/guides/install/#linux--macos
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/622d8521-111c-4ed0-bb02-094109291740)
 
+#### Step 4: if require create the folder again [optional]
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/1d007238-4a11-4dcf-81b2-4f9d23cc7431)
+
 
 Stay Up-to-Date
 ---------------
