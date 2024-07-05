@@ -27,9 +27,17 @@ bash get-whishper.sh
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/efdff430-fb3f-4232-ac22-659fa5f0896f)
 
 #### Step 3: Run the download Scripts and files [Manual] from https://whishper.net/guides/install/#linux--macos
+```
+curl -o docker-compose.yml https://raw.githubusercontent.com/pluja/whishper/main/docker-compose.yml && \
+ curl -o .env https://raw.githubusercontent.com/pluja/whishper/main/example.env && \
+ curl -o nginx.conf https://raw.githubusercontent.com/pluja/whishper/main/nginx.conf
+```
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/622d8521-111c-4ed0-bb02-094109291740)
 
 #### Step 4A: if require create the folder again [optional]
+```
+mkdir ./whishper_data/libretranslate/{data,cache}
+```
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/1d007238-4a11-4dcf-81b2-4f9d23cc7431)
 
 #### Step 4B: Give the permission  [change the LOCATION]
