@@ -31,6 +31,9 @@ Installing on Mac (M1 or M2 Apple Silicon Processor)
 
 The installation process will begin, and you'll be prompted to download the Stable Diffusion models from the internet. This may take several minutes depending on your internet connection.
 
+### Example Installing StableSwarmUI
+
+
 ### Configuration
 
 During the installation process, you'll be asked to choose a backend type. For Mac computers with M1 or M2 processors, we recommend choosing the ComfyUI backend and selecting the Stable Diffusion XL Base and Refiner models in the Download Models screen.
