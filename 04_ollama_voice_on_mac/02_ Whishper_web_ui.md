@@ -39,6 +39,9 @@ bash get-whishper.sh
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/acbf1a06-bda4-40d3-8886-49f809826e3a)
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/b7cb4a55-7dfe-4bcf-8f80-1d54bf6a98a0)
 
+#### Step 6: Done! You can now access Whishper at http://localhost:8082.
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/40532a86-34cf-4968-acc3-d42ef79a0d54)
+
 
 Stay Up-to-Date
 ---------------
