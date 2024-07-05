@@ -24,6 +24,9 @@ curl -fsSL -o get-whishper.sh https://raw.githubusercontent.com/pluja/whishper/m
 bash get-whishper.sh
 ```
 
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/efdff430-fb3f-4232-ac22-659fa5f0896f)
+
+
 Stay Up-to-Date
 ---------------
 
