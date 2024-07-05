@@ -32,10 +32,16 @@ bash get-whishper.sh
 #### Step 4A: if require create the folder again [optional]
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/1d007238-4a11-4dcf-81b2-4f9d23cc7431)
 
-#### Step 4B: Give the permission  
+#### Step 4B: Give the permission  [change the LOCATION]
+```
+sudo chmod -R 777 /LOCATION/whishper_web_ui/whishper_data
+```
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/42c71b3d-6a73-4665-a5b9-c954ff43b203)
 
 #### Step 5: run the docker command
+```
+docker compose up -d
+```
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/acbf1a06-bda4-40d3-8886-49f809826e3a)
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/b7cb4a55-7dfe-4bcf-8f80-1d54bf6a98a0)
 
