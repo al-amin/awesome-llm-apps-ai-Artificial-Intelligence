@@ -36,7 +36,8 @@ bash get-whishper.sh
 ```
 sudo chmod -R 777 /LOCATION/whishper_web_ui/whishper_data
 ```
-![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/42c71b3d-6a73-4665-a5b9-c954ff43b203)
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/eac83471-5ae1-45f0-9aab-b54ed24bbb44)
+
 
 #### Step 5: run the docker command
 ```
