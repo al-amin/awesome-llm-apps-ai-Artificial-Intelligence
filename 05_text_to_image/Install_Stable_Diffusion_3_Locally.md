@@ -45,6 +45,17 @@ The installation process will begin, and you'll be prompted to download the Stab
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/e1e49926-e39f-4b72-93d9-5b1ce9d32dc6)
 
 
+### Featured Images from community
+All sorts of cool pictures created by our community!
+
+#### [visit website -civitai](https://civitai.com/images)
+
+Get inspired by the creative works of our community, featuring:
+  * Simple shapes
+  * Detailed landscapes
+  * Human faces and more...
+  
+  A virtual canvas where you can unleash your creativity or find inspiration for your next project!
 
 ### Configuration
 
