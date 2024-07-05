@@ -35,6 +35,9 @@ bash get-whishper.sh
 #### Step 4B: Give the permission  
 ![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/42c71b3d-6a73-4665-a5b9-c954ff43b203)
 
+#### Step 5: run the docker command
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/acbf1a06-bda4-40d3-8886-49f809826e3a)
+
 
 Stay Up-to-Date
 ---------------
