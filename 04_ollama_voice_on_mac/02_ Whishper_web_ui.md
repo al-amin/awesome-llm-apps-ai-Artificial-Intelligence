@@ -1,1 +1,32 @@
+**Whisper: Open-Source Audio Transcription and Subtitling Suite**
+===============================================
+https://whishper.net/
 
+Overview
+--------
+
+Whisper is an open-source, locally installed audio transcription and subtitling suite that provides a full-featured web-based user interface. You can access the source code and installation instructions on GitHub at [https://github.com/pluja/whishper](https://github.com/pluja/whishper).
+
+Documentation
+------------
+
+For detailed installation guides and documentation, please visit: <https://whishper.net/guides/install/>
+
+### Quick Installation Guide (Linux/MacOS)
+
+#### Step 1: Download the Installation Script
+```
+curl -fsSL -o get-whishper.sh https://raw.githubusercontent.com/pluja/whishper/main/get-whishper.sh
+```
+
+#### Step 2: Run the Installation Script
+```
+bash get-whishper.sh
+```
+
+Stay Up-to-Date
+---------------
+
+To access the latest updates, release notes, and changes, please visit the Whisper GitHub page at [https://github.com/pluja/whishper?tab=readme](https://github.com/pluja/whishper?tab=readme).
+
+Let me know if you need any further modifications!
