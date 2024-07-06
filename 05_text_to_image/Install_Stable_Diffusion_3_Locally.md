@@ -76,6 +76,7 @@ During the installation process, you'll be asked to choose a backend type. For M
 cd /INSTALLED LOCATION/StableSwarmUI/dlbackend/ComfyUI/custom_nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 ```
+![image](https://github.com/al-amin/ai-Artificial-Intelligence/assets/2225839/e300962f-3a46-49f7-882d-afae117c1804)
 
 
 Stay Up-to-Date
