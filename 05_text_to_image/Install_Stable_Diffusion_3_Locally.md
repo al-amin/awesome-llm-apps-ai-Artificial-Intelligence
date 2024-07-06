@@ -68,6 +68,16 @@ Get inspired by the creative works of our community, featuring:
 
 During the installation process, you'll be asked to choose a backend type. For Mac computers with M1 or M2 processors, we recommend choosing the ComfyUI backend and selecting the Stable Diffusion XL Base and Refiner models in the Download Models screen.
 
+
+### How to install ComfyUI Manager (change INSTALLED LOCATION)
+[ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager) is an extension designed to enhance the usability of ComfyUI. It offers management functions to install, remove, disable, and enable various custom nodes of ComfyUI. Furthermore, this extension provides a hub feature and convenience functions to access a wide range of information within ComfyUI.
+
+```
+cd /INSTALLED LOCATION/StableSwarmUI/dlbackend/ComfyUI/custom_nodes
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+```
+
+
 Stay Up-to-Date
 ---------------
 
