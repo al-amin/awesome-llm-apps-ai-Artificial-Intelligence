@@ -49,3 +49,10 @@ docker-compose --profile development up
 
 3. Access from the browser:
 ![9368](https://github.com/user-attachments/assets/790984ba-dddd-46fa-8651-2593ca73122e)
+
+
+fix ollama issue: (access ollama from localhost:5173)
+
+```bash
+OLLAMA_ORIGINS=http://localhost:5173 ollama serve
+```
