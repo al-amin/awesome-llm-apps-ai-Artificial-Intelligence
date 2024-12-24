@@ -44,3 +44,5 @@ docker build . --target bolt-ai-development
 ```bash
 docker-compose --profile development up
 ```
+
+![75339](https://github.com/user-attachments/assets/a87898c1-bbc0-4eb4-8569-4ea113229431)
