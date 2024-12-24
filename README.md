@@ -1,4 +1,4 @@
-# ai-Artificial-Intelligence
+# awesome-llm-apps-ai-Artificial-Intelligence
 
 # **Repository** - AI Projects/Learning
 
