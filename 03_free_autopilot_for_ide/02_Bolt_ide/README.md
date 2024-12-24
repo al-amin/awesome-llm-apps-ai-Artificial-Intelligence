@@ -15,3 +15,5 @@ ollama create -f Modelfile qwen2.5-coder-latest-extra-ctx:7b
 ```
 
 ![18443](https://github.com/user-attachments/assets/5487c0a2-f3b5-40aa-85dd-1792c21fa668)
+
+![69605](https://github.com/user-attachments/assets/1bcf1ab0-9d01-48a5-b071-b831c24c8f48)
