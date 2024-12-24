@@ -36,6 +36,8 @@ npm run dockerbuild
 # OR using direct Docker command:
 docker build . --target bolt-ai-development
 ```
+![64589](https://github.com/user-attachments/assets/a826406a-1c30-43b8-af8c-446a02529eca)
+
 
 2. Run the Container:
 
