@@ -23,7 +23,15 @@ The library has the following optional dependencies:
 To install the library, use the following command:
 
 ```bash
+conda create -n scrapeai python=3.11
+conda activate scrapeai 
 pip install scrapegraphai
+pip install nest_asyncio
+pip install playwright
+playwright install-deps
+playwright install
 ```
 
 ref [ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai)
+
+
