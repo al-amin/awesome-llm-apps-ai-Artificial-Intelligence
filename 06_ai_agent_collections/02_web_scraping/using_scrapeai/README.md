@@ -26,3 +26,4 @@ To install the library, use the following command:
 pip install scrapegraphai
 ```
 
+ref [ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai)
