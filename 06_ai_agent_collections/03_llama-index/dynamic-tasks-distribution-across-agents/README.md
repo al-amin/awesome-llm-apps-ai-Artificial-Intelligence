@@ -15,4 +15,6 @@ pip install pydantic
 pip install beautifulsoup4
 pip install google-search-results
 pip install python-telegram-bot
+pip install keyring
 ```
+
