@@ -1,0 +1,451 @@
+{
+  "name": "WhatsApp Local AI Assistant",
+  "nodes": [
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.query[\"hub.challenge\"] }}",
+        "options": {}
+      },
+      "id": "10ea6e33-331d-49ec-9ee9-74612d2fdb77",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        720,
+        360
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:3000/api/v1/prediction/d2d306de-7d3f-4ec1-b2f7-36fe2504d879",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "question",
+              "value": "={{ $json.body.entry[0].changes[0].value.messages[0].text.body }}"
+            },
+            {
+              "name": "chatId",
+              "value": "={{ $json.body.entry[0].changes[0].value.messages[0].from }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5bdf1d7d-e781-434f-a312-6f6f6bebeb60",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1440,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "media",
+        "operation": "mediaUrlGet",
+        "mediaGetId": "={{ $json.body.entry[0].changes[0].value.messages[0].audio.id }}",
+        "requestOptions": {}
+      },
+      "id": "8e1c713d-4f34-4214-bfa3-f5de3568e477",
+      "name": "WhatsApp Business Cloud1",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        660,
+        880
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "wWS21j7drsN9afIt",
+          "name": "WhatsApp Test Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5000/transcribe",
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "id": "813be08d-09b2-4d5f-a190-cbbb03e4195d",
+      "name": "Whisper Transcribe",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1140,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:3000/api/v1/prediction/d2d306de-7d3f-4ec1-b2f7-36fe2504d879",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "question",
+              "value": "={{ $json.transcription }}"
+            },
+            {
+              "name": "chatId",
+              "value": "={{ $('Webhook1').item.json.body.entry[0].changes[0].value.messages[0].from }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b9c10d79-d367-4d05-bbee-a1e46baa9ebf",
+      "name": "Generate AI Response",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1400,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "whatsAppApi",
+        "options": {}
+      },
+      "id": "e9930dd2-36e2-4db2-a068-54d8851afe71",
+      "name": "Get Voice File",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        900,
+        880
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "wWS21j7drsN9afIt",
+          "name": "WhatsApp Test Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "170244102849935",
+        "recipientPhoneNumber": "={{ $('Webhook1').item.json.body.entry[0].changes[0].value.messages[0].from }}",
+        "textBody": "={{ $json.text }}",
+        "additionalFields": {},
+        "requestOptions": {}
+      },
+      "id": "cae9af2e-c96a-4745-8d7d-694108b3ba64",
+      "name": "Respond to Voice",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1660,
+        880
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "wWS21j7drsN9afIt",
+          "name": "WhatsApp Test Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "170244102849935",
+        "recipientPhoneNumber": "={{ $('Webhook1').item.json.body.entry[0].changes[0].value.messages[0].from }}",
+        "textBody": "={{ $json.text }}",
+        "additionalFields": {},
+        "requestOptions": {}
+      },
+      "id": "7145a725-e834-4a6e-9749-ca474bd5471f",
+      "name": "Respond to Text",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1880,
+        600
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "wWS21j7drsN9afIt",
+          "name": "WhatsApp Test Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "66c90e32-27fb-4997-97e0-942d272e7b2c",
+        "responseMode": "responseNode",
+        "options": {
+          "rawBody": true
+        }
+      },
+      "id": "8bc0f8ae-2cea-484c-acbf-3efb59448ef4",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        500,
+        360
+      ],
+      "webhookId": "66c90e32-27fb-4997-97e0-942d272e7b2c"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.body.entry[0].changes[0].value.statuses }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "array",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Message Statuses"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "b87b0010-71ec-4971-9c97-26f56661cfba",
+                    "leftValue": "={{ $json.body.entry[0].changes[0].value.messages[0].type }}",
+                    "rightValue": "text",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Text Message"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "28a5f159-daf8-4991-86a1-73790739fe86",
+                    "leftValue": "={{ $json.body.entry[0].changes[0].value.messages[0].type }}",
+                    "rightValue": "audio",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Voice Note"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8d1da175-78af-4630-b187-5fd3b42a2668",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.1,
+      "position": [
+        720,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "66c90e32-27fb-4997-97e0-942d272e7b2c",
+        "options": {
+          "rawBody": true
+        }
+      },
+      "id": "a6b6631c-3bf7-461f-978d-b0232cefe8d3",
+      "name": "Webhook1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        500,
+        540
+      ],
+      "webhookId": "66c90e32-27fb-4997-97e0-942d272e7b2c"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Respond to Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud1": {
+      "main": [
+        [
+          {
+            "node": "Get Voice File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Whisper Transcribe": {
+      "main": [
+        [
+          {
+            "node": "Generate AI Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate AI Response": {
+      "main": [
+        [
+          {
+            "node": "Respond to Voice",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Voice File": {
+      "main": [
+        [
+          {
+            "node": "Whisper Transcribe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [],
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "WhatsApp Business Cloud1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "77d68e58-b718-4444-91f0-176b4d6b265b",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "4da1fe5bb44db137025557a5a3c0a35aa3d67ca16374900fe898288641864464"
+  },
+  "id": "yGrqcVtrea2BPWXH",
+  "tags": []
+}
