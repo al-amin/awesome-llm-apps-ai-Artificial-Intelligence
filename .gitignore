@@ -3,3 +3,4 @@
 03_free_autopilot_for_ide/02_Bolt_ide/bolt.diy
 .env
 06_ai_agent_collections/01_n8n/self-hosted-ai-starter-kit-main/.env
+06_ai_agent_collections/09_without_framework/credentials.json
