@@ -6,6 +6,7 @@ KEYRING_SERVICE_NAME = 'google_calendar_api'
 KEYRING_CLIENT_ID_KEY = 'client_id'
 KEYRING_CLIENT_SECRET_KEY = 'client_secret'
 KEYRING_CALENDAR_ID_KEY = 'appointments_calendar_id'
+KEYRING_CALENDAR_ATTENDEES_EMAIL_ID_KEY = 'appointments_calendar_attendees_email_id'
 KEYRING_TELEGRAM_TOKEN_KEY = 'telegram_token'
 
 def prompt_for_update(key):
@@ -36,6 +37,11 @@ def store_credentials_to_keyring():
     if calendar_id is None or prompt_for_update('Appointments Calendar ID'):
         appointments_calendar_id = input("Enter the Appointments Calendar ID: ")
         keyring.set_password(KEYRING_SERVICE_NAME, KEYRING_CALENDAR_ID_KEY, appointments_calendar_id)
+    
+    calendar_attendees_email_id = keyring.get_password(KEYRING_SERVICE_NAME, KEYRING_CALENDAR_ATTENDEES_EMAIL_ID_KEY)
+    if calendar_attendees_email_id is None or prompt_for_update('Appointments Calendar Attendees Email ID'):
+        appointments_attendees_email_id = input("Enter the Appointments Calendar attendees Email ID: ")
+        keyring.set_password(KEYRING_SERVICE_NAME, KEYRING_CALENDAR_ATTENDEES_EMAIL_ID_KEY, appointments_attendees_email_id)
 
     telegram_token = keyring.get_password(KEYRING_SERVICE_NAME, KEYRING_TELEGRAM_TOKEN_KEY)
     if telegram_token is None or prompt_for_update('Telegram Token'):
