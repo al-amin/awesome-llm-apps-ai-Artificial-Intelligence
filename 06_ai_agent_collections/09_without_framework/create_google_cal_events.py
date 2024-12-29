@@ -14,6 +14,8 @@ KEYRING_CLIENT_SECRET_KEY = 'client_secret'
 
 # Use the specific calendar ID for "Appointments"
 KEYRING_CALENDAR_ID_KEY = 'appointments_calendar_id'
+KEYRING_CALENDAR_ATTENDEES_EMAIL_ID_KEY = 'appointments_calendar_attendees_email_id'
+
 
 def get_client_config():
     """Retrieve the client ID and client secret from the keyring."""
@@ -70,7 +72,7 @@ def create_event(service, event_details, calendar_id):
             'dateTime': event_details['end_time'],
             'timeZone': 'UTC',
         },
-        'attendees': [{'email': attendee.strip()} for attendee in event_details.get('attendees', ['asif.dot.comilla@gmail.com'])],
+        'attendees': [{'email': attendee.strip()} for attendee in event_details.get('attendees', [keyring.get_password(KEYRING_SERVICE_NAME, KEYRING_CALENDAR_ATTENDEES_EMAIL_ID_KEY)])],
         'reminders': {
             'useDefault': False,
             'overrides': [
@@ -130,7 +132,7 @@ def get_event_details():
     end_time = end_time.isoformat() + 'Z'
 
     attendees_input = input("Enter attendees emails separated by commas (optional): ")
-    attendees = [email.strip() for email in attendees_input.split(',')] if attendees_input else ['asif.dot.comilla@gmail.com']
+    attendees = [email.strip() for email in attendees_input.split(',')] if attendees_input else [keyring.get_password(KEYRING_SERVICE_NAME, KEYRING_CALENDAR_ATTENDEES_EMAIL_ID_KEY)]
 
     return {
         'summary': summary,

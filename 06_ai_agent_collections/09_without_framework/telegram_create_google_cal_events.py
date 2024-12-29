@@ -18,6 +18,7 @@ KEYRING_CLIENT_ID_KEY = 'client_id'
 KEYRING_CLIENT_SECRET_KEY = 'client_secret'
 KEYRING_CALENDAR_ID_KEY = 'appointments_calendar_id'
 KEYRING_TELEGRAM_TOKEN_KEY = 'telegram_token'
+KEYRING_CALENDAR_ATTENDEES_EMAIL_ID_KEY = 'appointments_calendar_attendees_email_id'
 
 # Configure logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -98,14 +99,14 @@ async def location(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def description(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Store the description and ask for the start time."""
     description = update.message.text
-    context.user_data['description'] = '' if description.lower() == 'skip' else description
+    context.user_data['description'] = '' if description.lower() == 'skip' or description == '' else description
     await update.message.reply_text('Enter the start date and time (YYYY-MM-DDTHH:MM:SS) or type "now" for current time:')
     return START_TIME
 
 async def start_time(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Store the start time and ask for the end time."""
     start_time_input = update.message.text
-    if start_time_input.lower() == "now":
+    if start_time_input.lower() == "now" or start_time_input == "":
         start_time = datetime.utcnow()
     else:
         start_time = datetime.strptime(start_time_input, "%Y-%m-%dT%H:%M:%S")
@@ -117,7 +118,7 @@ async def start_time(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def end_time(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Store the end time and create the event."""
     end_time_input = update.message.text
-    if end_time_input.lower() == "default":
+    if end_time_input.lower() == "default" or end_time_input == "":
         end_time = datetime.fromisoformat(context.user_data['start_time']) + timedelta(hours=1)
     else:
         end_time = datetime.strptime(end_time_input, "%Y-%m-%dT%H:%M:%S")
@@ -133,7 +134,7 @@ async def end_time(update: Update, context: ContextTypes.DEFAULT_TYPE):
             'description': context.user_data['description'],
             'start_time': context.user_data['start_time'],
             'end_time': context.user_data['end_time'],
-            'attendees': [{'email': 'asif.dot.comilla@gmail.com'}]  # Updated email
+            'attendees': [{'email': keyring.get_password(KEYRING_SERVICE_NAME, KEYRING_CALENDAR_ATTENDEES_EMAIL_ID_KEY)}]  # Updated email
         }
         created_event = create_event(service, event_details, calendar_id)
         await update.message.reply_text(f"Event '{event_details['summary']}' created successfully! Link: {created_event.get('htmlLink')}")
