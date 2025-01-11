@@ -57,6 +57,7 @@ For more information and to check the list of available models, refer to the off
 5. Access ollama from any application:
 --------------------------------------
 `OLLAMA_ORIGINS=* ollama serve`
+OR `launchctl setenv OLLAMA_ORIGINS "*"`
 
 6. Access ollama from any device from same network:
 --------------------------------------
