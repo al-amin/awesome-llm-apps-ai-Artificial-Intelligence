@@ -62,5 +62,5 @@ OR `launchctl setenv OLLAMA_ORIGINS "*"`
 6. Access ollama from any device from same network:
 --------------------------------------
 `launchctl setenv OLLAMA_HOST 0.0.0.0:11434`
-ref: https://stackoverflow.com/questions/603785/environment-variables-in-mac-os-x
+ref: https://stackoverflow.com/questions/603785/environment-variables-in-mac-os-x AND
 https://github.com/ollama/ollama/issues/703
