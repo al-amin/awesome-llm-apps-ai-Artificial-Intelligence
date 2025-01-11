@@ -53,3 +53,13 @@ Upgrade all installed Ollama models using command line:
 `ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} ollama pull {}`
 
 For more information and to check the list of available models, refer to the official Ollama documentation <https://github.com/ollama/ollama>.
+
+5. Access ollama from any application:
+--------------------------------------
+`OLLAMA_ORIGINS=* ollama serve`
+
+6. Access ollama from any device from same network:
+--------------------------------------
+`launchctl setenv OLLAMA_HOST 0.0.0.0:11434`
+ref: https://stackoverflow.com/questions/603785/environment-variables-in-mac-os-x
+https://github.com/ollama/ollama/issues/703
