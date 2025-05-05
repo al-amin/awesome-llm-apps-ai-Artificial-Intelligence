@@ -7,7 +7,7 @@ Use Ollama to organize your notes in Obsidian with this quick start guide:
 3. **Configure Ollama for Obsidian on Mac**:
 	* Open Terminal on your Mac.
 	* Execute the command: `OLLAMA_ORIGINS=app://obsidian.md* ollama serve`
- 	* To allow all applicatoins: `OLLAMA_ORIGINS='*' ollama serve`
+ 	* To allow all applications: `OLLAMA_ORIGINS='*' ollama serve`
 ![image](https://github.com/user-attachments/assets/ff38e78a-5605-49af-a15f-fc730d86b509)
 
 4. **Install BMO Chatbot Plugin**: Install the BMO Chatbot plugin from GitHub: https://github.com/longy2k/obsidian-bmo-chatbot 
