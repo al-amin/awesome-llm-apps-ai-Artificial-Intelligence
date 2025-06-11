@@ -45,7 +45,7 @@ Visit the [demo site](https://huggingface.co/spaces/Xenova/whisper-web) to try i
 
 2. **Run the professional development launcher**
 
-   We've included an enhanced launcher script that handles dependency installation, environment verification, and server startup:
+   We've included an enhanced launcher script that handles dependency installation, environment verification, and server startup (https://github.com/al-amin/awesome-llm-apps-ai-Artificial-Intelligence/blob/main/04_ollama_voice_on_mac/run_dev.sh):
 
    ```bash
    ./run_dev.sh
